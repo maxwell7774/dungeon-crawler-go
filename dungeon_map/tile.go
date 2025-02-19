@@ -1,6 +1,10 @@
 package dungeonmap
 
 type Tile struct {
-	Sprite uint8
+	sprite uint8
 	IsWall bool
+}
+
+func (t Tile) GetSprite() string {
+    return string(t.sprite)
 }

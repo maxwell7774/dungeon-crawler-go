@@ -19,10 +19,10 @@ func NewMap(rows, cols int) *DungeonMap {
         for j := 0; j < cols; j++ {
             var tile Tile
             if i == 0 || j == 0 || i == rows-1 || j == cols-1 {
-                tile.Sprite = '0'
+                tile.sprite = '0'
                 tile.IsWall = true
             } else {
-                tile.Sprite = ' '
+                tile.sprite = ' '
                 tile.IsWall = false
             }
             row = append(row, tile)
@@ -38,7 +38,7 @@ func (d *DungeonMap) PrintMap() {
     for i := 0; i < d.Rows; i++ {
         for j := 0; j < d.Cols; j++ {
             tile := d.Tiles[i][j]
-            fmt.Printf("%c ", tile.Sprite)
+            fmt.Printf("%c ", tile.sprite)
         }
         fmt.Println()
     }

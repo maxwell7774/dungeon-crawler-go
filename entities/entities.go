@@ -5,7 +5,7 @@ type EntityPosition struct {
     Y int
 }
 
-func (p EntityPosition) IsColliding(other Position) bool {
+func (p EntityPosition) IsColliding(other EntityPosition) bool {
     if p.X == other.X && p.Y == other.Y {
         return true
     }

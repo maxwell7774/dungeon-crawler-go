@@ -5,6 +5,13 @@ type Player struct {
     sprite uint8
 }
 
+func NewPlayer(x int, y int) Player {
+    return Player{
+        Pos: EntityPosition{X: x, Y: y},
+        sprite: 'P',
+    }
+}
+
 func (p Player) GetSprite() string {
-    return string(p.sprite)
+    return "\033[31m" + string(p.sprite) + "\033[0m"
 }
